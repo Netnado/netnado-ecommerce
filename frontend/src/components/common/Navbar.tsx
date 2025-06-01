@@ -1,15 +1,17 @@
 import { FaCartShopping, FaCircleUser } from "react-icons/fa6";
+import CountryDropdown from "./CountryDropdown";
 
 function Navbar() {
   return (
     <div className="w-full flex items-center justify-between p-4 bg-blue-500 text-white">
-      <div className="text-lg font-bold">My Application</div>
-      <nav className="space-x-4">
-        <a href="/" className="hover:underline">Home</a>
-        <a href="/about" className="hover:underline">About</a>
-        <a href="/contact" className="hover:underline">Contact</a>
-      </nav>
-      <div className="flex items-center space-x-2">
+      <div className="text-lg font-bold grow-3">My Application</div>
+
+      <div className="flex items-center justify-center space-x-4 grow-5">
+        <CountryDropdown />
+      </div>
+
+
+      <div className="flex items-center justify-center space-x-2 grow-4">
         <button className="flex items-center justify-between gap-2 bg-white text-blue-500 px-2 py-2 rounded hover:bg-gray-200 cursor-pointer">
           <FaCartShopping />
           Cart
